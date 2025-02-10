@@ -8,7 +8,35 @@ public class Main {
         mercedes.accelerate(20);
         mercedes.accelerate(-60);  // Test with negative acceleration
 
-//        System.out.println("----Testing test case : testCar2----");
+//        System.out.println("---TestCar2");
+//        Car car = new Car("Tata", 4, 4, 4, true, "Sedan");
+//        car.move(20, 30);
+//        System.out.println(car.getCurrentSpeed() == 20);
+//        System.out.println(car.getCurrentDirection() == 30);
+//        car.steer(45);
+//        System.out.println(car.getCurrentDirection()==75);
+//        System.out.println(car.getCurrentSpeed()==20);
+//        car.stop();
+//        System.out.println(car.getCurrentSpeed()==0);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//        System.out.println("----Testing test case : testCar1----");
 //
 //        // Testing Car Class
 //        Car car = new Car("Tata", 4, 4, 4, true, "Sedan");

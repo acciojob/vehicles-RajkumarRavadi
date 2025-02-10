@@ -14,7 +14,7 @@ public class Vehicle {
 
     public void steer(int direction){
         // Normalize direction to be between 0 and 360 degrees
-        direction = direction % 360;
+        direction = getCurrentDirection() + direction % 360;
         if (direction < 0) {
             direction += 360; // Ensure negative directions are corrected
         }
