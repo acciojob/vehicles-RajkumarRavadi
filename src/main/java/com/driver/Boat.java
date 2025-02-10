@@ -1,12 +1,12 @@
 package com.driver;
 
 public class Boat implements WaterVehicle{
-    private String name;
-    private int capacity;
+    public String name;
+    public int capacity;
 
     Boat (String name, int capacity){
-        setName(name);
-        setCapacity(capacity);
+        this.name = name;
+        this.capacity = capacity;
     }
 
     @Override
@@ -17,14 +17,5 @@ public class Boat implements WaterVehicle{
     @Override
     public int getVehicleCapacity() {
         return capacity;
-    }
-
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
     }
 }
