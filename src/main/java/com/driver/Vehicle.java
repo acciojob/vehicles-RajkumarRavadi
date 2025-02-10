@@ -22,20 +22,25 @@ public class Vehicle {
         System.out.println("steer method called - The direction is changed to: " + currentDirection + " degrees");
     }
 
-    public void move(int speed, int direction){
+    public void move(int speed, int direction) {
+        // Check for invalid speed (negative values)
         if (speed < 0) {
-            System.out.println("Invalid speed. Speed must be non-negative.");
-            return; // Prevent setting negative speed
+            setCurrentSpeed(0); // Set speed to 0 if negative
+            //System.out.println("Invalid speed. Speed must be non-negative.");
+            return; // Exit method early to prevent further execution with invalid speed
         }
 
         // Normalize direction between 0 and 360 degrees
-        direction = direction % 360;
+        direction = direction % 360;  // Ensure the direction falls within the range [-360, 360)
         if (direction < 0) {
-            direction += 360; // Ensure negative directions are corrected
+            direction += 360;  // Convert negative direction to positive by adding 360
         }
 
-        setCurrentSpeed(speed);
-        setCurrentDirection(direction);
+        // Update the speed and direction
+        setCurrentSpeed(speed);  // Set the speed
+        setCurrentDirection(direction);  // Set the direction
+
+        // Optional: Log the changes for debugging (you might remove this in production)
         System.out.println("move method called - The speed is changed to: " + currentSpeed + ", and the direction is changed to: " + currentDirection + " degrees");
     }
 

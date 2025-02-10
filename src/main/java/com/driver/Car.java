@@ -18,8 +18,14 @@ public class Car extends Vehicle {
         setManual(isManual);
         setType(type);
         setSeats(seats);
-        setCurrentGear(0);//Initialize the gear to 0
+        setCurrentGear(1);//Initialize the gear to 1
     }
+
+    public Car(String name, int wheels, int doors, int gears, boolean isManual, String type) {
+        // Set default seats value or handle this according to your logic
+        this(name, wheels, doors, gears, isManual, type, 4); // Defaulting seats to 4
+    }
+
 
     public void changeGear(int newGear){
         setCurrentGear(newGear);
